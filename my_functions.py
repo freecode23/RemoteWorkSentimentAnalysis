@@ -26,14 +26,14 @@ def delete_empty_tweet(the_df):
     the_df.reset_index(drop = True, inplace =True)
     return the_df
 
-def print_sentiment_tweet(the_df, sentiment = 'neg'):
+def print_sentiment_tweet(the_df, sentiment = 'NEGATIVE'):
     for i in range(len(the_df)):
-        if(sentiment == 'neg'):
-            if( the_df.iloc[i].VaderSentiment== 'neg'):
+        if(sentiment == 'NEGATIVE'):
+            if( the_df.iloc[i].VaderSentiment== 'NEGATIVE'):
                 print(i)
                 print(the_df.iloc[i].tweet)
         else:
-            if( the_df.iloc[i].VaderSentiment== 'pos'):
+            if( the_df.iloc[i].VaderSentiment== 'POSITIVE'):
                 print(i)
                 print(the_df.iloc[i].tweet)
 
